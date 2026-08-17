@@ -1,34 +1,22 @@
-# Substrings of Size Three with Distinct Characters
+# Pair Sum in a Sorted and Rotated Array
 
-## Problem Statement
+Given an array arr[] of size n, which is sorted and then rotated around an unknown pivot, the task is to check whether there exists a pair of elements in the array whose sum is equal to a given target value.
+
+### Examples : 
 ```
-A string is good if there are no repeated characters.
+Input: arr[] = [11, 15, 6, 8, 9, 10], target = 16
+Output: true
+Explanation: There is a pair (6, 10) with sum 16.
 
-Given a string s​​​​​, return the number of good substrings of length three in s​​​​​​.
+Input: arr[] = [11, 11, 15, 26, 38, 9, 10], target = 35
+Output: true
+Explanation: There is a pair (26, 9) with sum 35.
 
-Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
-
-A substring is a contiguous sequence of characters in a string.
-
-Constraints:
-
-1 <= s.length <= 100
-s​​​​​​ consists of lowercase English letters.
+Input: arr[] = [9, 10, 10, 11, 15, 26, 38], target = 45
+Output: false
+Explanation: There is no pair with sum 45.
 ```
-### Example
-```
-Input: s = "xyzzaz"
-Output: 1
 
-Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". 
-The only good substring of length 3 is "xyz".
-
-Input: s = "aababcabc"
-Output: 4
-
-Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc".
-The good substrings are "abc", "bca", "cab", and "abc".
-```
 ## Instructions
 1. Write your solution in `task.py`
 2. Do NOT modify `test_task.py`

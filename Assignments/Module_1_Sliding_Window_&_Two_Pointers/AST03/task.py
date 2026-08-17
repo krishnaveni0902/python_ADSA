@@ -1,15 +1,10 @@
-def Check_Palindrome(n: int,s:str) -> bool:
-    left = 0
-    right = n - 1
-    while left < right:
-        if s[left] != s[right]:
-            s1 = s[left + 1:right + 1]
-            s2 = s[left:right]
-            return s1 == s1[::-1] or s2 == s2[::-1]
-        left += 1
-        right -= 1
-    return True
+def countGoodSubstrings(s: str) -> int:
+      count = 0
+      for i in range(len(s) - 2):
+            substring = s[i:i + 3]
+            if len(set(substring)) == 3:
+                  count += 1
+      return count
 if __name__ == '__main__':
-   n = int(input())
-   s = input()
-   print(Check_Palindrome(n,s))
+    s = input()
+    print(countGoodSubstrings(s))
