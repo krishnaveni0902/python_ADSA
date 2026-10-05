@@ -25,7 +25,6 @@ def traverse():
 traverse()
 
 #leet code - 206
-
 class Solution(object):
     def reverseList(self, head):
         """
@@ -48,3 +47,26 @@ class Solution(object):
         head.next.next = head 
         head.next = None 
         return new_head
+
+
+#leetcode - 141
+class Solution(object):
+    def hasCycle(self, head):
+        '''
+        slow = head 
+        fast = head 
+        while fast is not None and fast.next is not None:
+            slow = slow.next 
+            fast = fast.next.next
+            if slow == fast:
+                return True 
+        return False '''
+        a = set()
+        curr = head 
+        while curr:
+            if curr in a:
+                return True
+            a.add(curr)
+            curr = curr.next
+        return False
+        

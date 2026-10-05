@@ -2,6 +2,7 @@
 Nice- Subarry:
 
 '''
+
 #leetcode : 1248
 class Solution(object):
     def numberOfSubarrays(self, nums, k):
